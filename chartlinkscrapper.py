@@ -18,7 +18,9 @@ if __name__ == '__main__':
         csv_file.writelines(temp_text)
         csv_file.writelines('\n')
         for element in response:
-            temp_text = str(today['Date']) + ',' + str(today['Time']) + ',' + str(today['Duration']) + ',' + str(today['Pattern']) + ',' + str(element["short_name"]) + ',' + str(element["price"])
+            temp_text = str(today['Date']) + ',' + str(today['Time']) + ',' \
+                        + str(today['Duration']) + ',' + str(today['Pattern']) \
+                        + ',' + str(element["short_name"]) + ',' + str(element["price"])
             csv_file.writelines(temp_text)
             csv_file.writelines('\n')
     print("Response file is created")
